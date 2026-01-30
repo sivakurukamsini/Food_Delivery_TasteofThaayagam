@@ -1,8 +1,8 @@
-# Food Delivery Admin Dashboard
+Food Delivery Admin Dashboard
 
 A modern and responsive admin dashboard for managing food delivery operations.
 
-## 🚀 Tech Stack
+ Tech Stack
 - React
 - Vite
 - JavaScript (ES6+)
@@ -12,7 +12,7 @@ A modern and responsive admin dashboard for managing food delivery operations.
 - React Toastify (notifications)
 - Internationalization (i18n)
 
-## ✨ Features
+ Features
 - Responsive Admin UI
 - Add/Edit/Delete food items
 - Manage food categories
@@ -26,8 +26,8 @@ A modern and responsive admin dashboard for managing food delivery operations.
 - Multi-language support (i18n)
 - Real-time notifications
 
-## 📁 Project Structure
-```
+ Project Structure
+
 admin/
 ├── src/
 │   ├── components/       # Reusable UI components
@@ -56,91 +56,91 @@ admin/
 ├── package.json
 ├── vite.config.js
 └── README.md
-```
 
-## 🔧 Installation & Setup
 
-### Prerequisites
+ Installation & Setup
+
+ Prerequisites
 - Node.js (v14 or higher)
 - npm or yarn
 - Running backend server
 
-### Installation Steps
-```bash
+ Installation Steps
+bash
 cd admin
 npm install
 npm run dev
-```
+
 
 The admin dashboard will be available at `http://localhost:5174`
 
-## 📝 Environment Setup
+ Environment Setup
 
 Make sure your backend is running and configured properly. The admin dashboard communicates with the backend API for all operations.
 
-## 📌 Admin Functionalities
+ Admin Functionalities
 
-### Dashboard
+ Dashboard
 - View overall statistics
 - Monitor recent orders
 - Track system performance
 
-### Food Management
+ Food Management
 - Add new food items with images
 - Edit existing items
 - Delete items
 - Organize by categories
 - CSV/PDF export functionality
 
-### Order Management
+ Order Management
 - View all orders
 - Update order status
 - Track order details
 - Customer information
 
-### Reservation Management
+ Reservation Management
 - View table reservations
 - Manage booking status
 - Update reservation details
 
-### User Management
+ User Management
 - View all users
 - Add new users
 - Manage user roles
 - Edit user information
 
-### Supplier Management
+ Supplier Management
 - Manage suppliers
 - Track supplier details
 - Update supplier information
 
-### Settings
+ Settings
 - Configure admin preferences
 - Manage system settings
 
-## 🔐 Authentication
+ Authentication
 
 Admin users must login with valid credentials. The authentication is handled through the backend API with JWT tokens.
 
-## 📌 Purpose
+ Purpose
 
 This project was built to practice frontend development and showcase administrative dashboard skills for managing food delivery operations.
 
-## 🤝 Contributing
+ Contributing
 
 Feel free to fork and contribute to this project!
 
-## 📄 License
+ License
 
 This project is open source and available under the MIT License.
 
-## 👨‍💻 Author
+ Author
 
-Siva Kurukamsini
+Kamsini Sivakuru
 
-## 📞 Contact
+ Contact
 
 GitHub: https://github.com/sivakurukamsini/Food_Delivery_TasteofThaayagam
-Live Site: https://sivakurukamsini.github.io/Food_Delivery_TasteofThaayagam/
+
 
 
