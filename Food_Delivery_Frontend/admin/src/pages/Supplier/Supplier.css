@@ -1,0 +1,565 @@
+/* ====================== Supplier Page CSS ====================== */
+
+/* Top controls (search + buttons) */
+.top-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.search-bar {
+  flex: 1.5;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.add-supplier-btn,
+.generate-report-btn {
+  padding: 10px 18px;
+  background-color: #3b0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.add-supplier-btn:hover,
+.generate-report-btn:hover {
+  background-color: #5c1a1a;
+}
+
+/* Force generate button to rightmost */
+.right-controls {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+/* Supplier inline add form */
+.supplier-form {
+  display: grid;
+  grid-template-columns: 200px 160px 150px 100px 120px 160px 100px;
+  gap: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+/* ====================== Horizontal Add Supplier Form ====================== */
+.supplier-form.horizontal-form {
+  display: flex;
+  flex-wrap: wrap; /* wrap on small screens */
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.supplier-form.horizontal-form input,
+.supplier-form.horizontal-form select {
+  flex: 1 1 150px;
+  padding: 8px 12px;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Status dropdown comes last after Quantity */
+.supplier-form.horizontal-form .status-select {
+  order: 6; /* adjust order if needed */
+}
+
+.supplier-form.horizontal-form button {
+  padding: 8px 16px;
+  height: 35px;
+  background-color: #3b0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.supplier-form.horizontal-form button:hover {
+  background-color: #5c1a1a;
+  box-shadow: 0 0 6px rgba(91, 26, 26, 0.7);
+}
+
+.supplier-form.horizontal-form button:active {
+  background-color: #6b1f1f;
+}
+
+/* ====================== Table ====================== */
+.list-table-format {
+  display: grid;
+  /* Use responsive columns with min widths similar to reservation page */
+  grid-template-columns: repeat(7, minmax(110px, 1fr));
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  box-sizing: border-box;
+  white-space: normal;
+}
+
+.list-table-format.title {
+  background-color: var(--input-bg, #f7f7f7);
+  font-weight: bold;
+  border-bottom: 2px solid var(--input-border, #ddd);
+}
+
+
+
+.list-table-format.no-border {
+  border-bottom: none;
+}
+
+.list-table-format.title b {
+  display: block;
+  text-align: center;
+}
+
+.list-table-format:not(.title) p,
+.list-table-format p,
+.list-table-format b {
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.action-icons span {
+  margin-right: 12px;
+  display: inline-flex;
+}
+
+.action-icon {
+  font-size: 16px;
+  color: #3b0000;
+}
+
+.action-icon:hover {
+  color: #5c1a1a;
+}
+
+/* ====================== Edit Modal ====================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+}
+
+/* Two-column layout for form rows */
+.edit-form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 10px;
+}
+
+.edit-form-row label {
+  width: 90px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.edit-form-row input,
+.edit-form-row select {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Align contact + status in same row */
+.edit-row-inline {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* Align item name + qty in same row */
+.edit-row-items {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+}
+
+/* Modal action buttons */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-actions .save-btn {
+  background-color: #3b0000;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-actions .cancel-btn {
+  background-color: #ccc;
+  color: #000;
+  padding: 8px 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-actions .save-btn:hover {
+  background-color: #5c1a1a;
+}
+
+.modal-actions .cancel-btn:hover {
+  background-color: #bbb;
+}
+
+/* ====================== Delete Confirmation Modal ====================== */
+.delete-modal-content {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.delete-modal-content p {
+  margin-bottom: 20px;
+}
+
+.delete-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.delete-actions .large-btn {
+  padding: 6px 16px;
+  font-size: 13px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.delete-actions .large-btn.save-btn {
+  background-color: #3b0000;
+  color: #fff;
+  border: none;
+}
+
+.delete-actions .large-btn.cancel-btn {
+  background-color: #ccc;
+  color: #000;
+  border: none;
+}
+
+.delete-actions .large-btn.save-btn:hover {
+  background-color: #5c1a1a;
+}
+
+.delete-actions .large-btn.cancel-btn:hover {
+  background-color: #b3b3b3;
+}
+
+/* ====================== Responsive ====================== */
+@media (max-width: 1024px) {
+  .list-table-format {
+    grid-template-columns: 1.8fr 1.8fr 1fr 1.8fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .list-table-format {
+    grid-template-columns: 1.5fr 1.5fr 1fr 1.5fr 1fr;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .list-table-format {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .top-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .add-supplier-btn,
+  .generate-report-btn {
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* ================= Top controls ================= */
+.top-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.search-bar-top {
+  height: 40px;
+  padding: 0 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.right-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.top-btn,
+.add-supplier-btn,
+.generate-report-btn {
+  height: 40px;
+  padding: 0 18px;
+  font-size: 15px; /* slightly bigger */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #3b0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.top-btn:hover,
+.add-supplier-btn:hover,
+.generate-report-btn:hover {
+  background-color: #5c1a1a; /* light maroon hover */
+  box-shadow: 0 0 8px rgba(91, 26, 26, 0.7);
+}
+
+.top-btn:active,
+.add-supplier-btn:active,
+.generate-report-btn:active {
+  background-color: #6b1f1f; /* slightly darker maroon on click */
+}
+
+
+
+
+
+
+
+/* === FIX FOR SUPPLIER TABLE SPACING === */
+.supplier-page .list-table-format {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr 1.8fr 1.8fr 1.2fr 1.2fr 1fr !important;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Title row */
+.supplier-page .list-table-format.title {
+  background-color: #f9f9f9;
+  font-weight: bold;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Text formatting */
+.supplier-page .list-table-format p,
+.supplier-page .list-table-format b {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Remove border for empty or end rows */
+.supplier-page .list-table-format.no-border {
+  border: none;
+}
+
+/* Status indicator */
+.status-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.status-indicator.active {
+  background-color: green;
+}
+
+.status-indicator.inactive {
+  background-color: red;
+}
+
+/* Action icons */
+.action-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* spacing between edit and delete icons */
+}
+
+.action-icon {
+  font-size: 16px;
+  color: #3b0000;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.action-icon:hover {
+  color: #5c1a1a;
+}
+
+
+
+
+
+/* ================= Page container & full-width list ================= */
+.supplier-page .list {
+  padding: 20px 24px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.supplier-page.page-container,
+.supplier-page.page-container > .list {
+  width: 100%;
+  max-width: none;
+  padding: 20px 24px;
+  box-sizing: border-box;
+}
+
+.supplier-page.page-container {
+  display: block;
+}
+
+.supplier-page .list.add {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* === Dark Mode Overrides for Supplier Page === */
+body.dark-mode .supplier-page .list {
+  background-color: #1e1e1e; /* dark container */
+  box-shadow: 0 0 5px rgba(255,255,255,0.03);
+}
+
+body.dark-mode .supplier-page .list-table-format,
+body.dark-mode .supplier-page .list-table-format:not(.title) {
+  background-color: #151515; /* dark row background */
+  border-bottom: 1px solid #2b2b2b;
+  color: #e6e6e6;
+}
+
+body.dark-mode .supplier-page .list-table-format.title {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-bottom: 2px solid #444;
+}
+
+body.dark-mode .supplier-page .list-table-format:not(.title):hover {
+  background-color: #1a1a1a;
+}
+
+/* Inputs & search in dark mode */
+body.dark-mode .supplier-page .search-bar,
+body.dark-mode .supplier-form input,
+body.dark-mode .supplier-form select {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+body.dark-mode .supplier-page .search-bar::placeholder,
+body.dark-mode .supplier-form input::placeholder {
+  color: #cccccc;
+}
+
+
+.supplier-page .list-table {
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* subtle background for table rows to match other admin pages */
+.list-table-format {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Ensure the date filter input uses readable white text in dark mode */
+body.dark-mode .supplier-page .date-filter {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+body.dark-mode .supplier-page .date-filter::placeholder {
+  color: #cccccc;
+}
+
+
+
+
+
+
+

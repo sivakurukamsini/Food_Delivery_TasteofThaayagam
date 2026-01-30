@@ -1,0 +1,101 @@
+.myaccount-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 90px);
+  padding: 28px;
+  background: linear-gradient(180deg, #f7f9fb 0%, #ffffff 100%);
+}
+
+.myaccount-card {
+  width: 100%;
+  max-width: 920px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(31, 45, 61, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overflow: hidden;
+}
+
+.account-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-bottom: 1px solid #f0f2f5;
+  padding-bottom: 16px;
+}
+
+.avatar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-preview {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #e6eef7;
+  box-shadow: 0 6px 18px rgba(42, 84, 136, 0.08);
+}
+
+.avatar-initial-large {
+  width: 96px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b0000, #3b0000);
+  color: white;
+  font-size: 36px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(30, 70, 120, 0.08);
+}
+
+.change-photo input { display:none }
+.change-photo {
+  font-size: 13px;
+  color: #3b0000;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.account-meta .account-title {
+  margin: 0;
+  font-size: 20px;
+  color: #1f2d3d;
+}
+.account-meta .account-name {
+  margin: 6px 0 0 0;
+  color: #556777;
+  font-weight: 600;
+}
+.account-meta .account-email { margin: 4px 0 0 0; color: #8899aa; font-size: 14px }
+
+.account-body { padding-top: 12px }
+.form-row { display:flex; gap:16px; margin-bottom:12px }
+.form-col { flex:1; display:flex; flex-direction:column }
+.form-col.full { flex:1 1 100% }
+.form-col label { font-size:13px; color:#556777; margin-bottom:6px }
+.form-col input { padding:10px 12px; border:1px solid #e6eef7; border-radius:10px; font-size:14px; background:#fbfdff }
+
+.actions { display:flex; gap:12px; justify-content:flex-end; margin-top:8px }
+.actions .primary { padding:10px 20px; border-radius:10px; border:none; background:#3b0000; color:#fff; cursor:pointer; font-weight:600 }
+.actions .primary:hover { filter:brightness(0.95); }
+.actions .cancel { padding:10px 20px; border-radius:10px; border:1px solid #3b0000; background:#fff; color:#3b0000; cursor:pointer }
+.actions .cancel:hover { background: #fff2f2; }
+
+.message { margin-top:10px; color: #1b6e3a; text-align:center }
+
+@media (max-width: 720px) {
+  .myaccount-card { padding: 16px }
+  .form-row { flex-direction: column }
+  .account-header { gap: 12px }
+}
