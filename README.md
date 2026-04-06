@@ -1,146 +1,19 @@
-Food Delivery Admin Dashboard
+Taste of Thayagam – Restaurant Ordering & Reservation System
 
-A modern and responsive admin dashboard for managing food delivery operations.
+A full-featured restaurant web application where customers can browse the menu, place online orders, make table reservations, and track delivery status. The system includes both a Customer Frontend and an Admin Panel for managing orders, menu items, and reservations.
 
- Tech Stack
-- React
-- Vite
-- JavaScript (ES6+)
-- CSS3
-- Axios (for API calls)
-- React Router
-- React Toastify (notifications)
-- Internationalization (i18n)
+Main Features
 
- Features
-- Responsive Admin UI
-- Add/Edit/Delete food items
-- Manage food categories
-- View and manage orders
-- User management
-- Reservation management
-- Supplier management
-- Dashboard analytics
-- Fast loading with Vite
-- Modern and intuitive design
-- Multi-language support (i18n)
-- Real-time notifications
+🔹 Customer Frontend Browse menu items by category Add dishes to cart Place online food orders Make table reservations Real-time delivery status tracking User-friendly, responsive UI
 
- Project Structure
+🔹 Admin Panel Add / Edit / Delete menu items Manage customer orders Approve / reject reservations Update delivery status (Preparing → Out for Delivery → Delivered) Dashboard with quick stats
 
-admin/
-├── src/
-│   ├── components/       # Reusable UI components
-│   │   ├── Navbar/
-│   │   └── Sidebar/
-│   ├── pages/            # Admin pages
-│   │   ├── Add/          # Add new items
-│   │   ├── Dashboard/    # Dashboard overview
-│   │   ├── List/         # View all items
-│   │   ├── Orders/       # Order management
-│   │   ├── Reservation/  # Reservation management
-│   │   ├── Supplier/     # Supplier management
-│   │   ├── User/         # User management
-│   │   ├── Settings/     # Admin settings
-│   │   └── MyAccount/    # Account settings
-│   ├── i18n/             # Internationalization
-│   ├── services/         # API services
-│   │   ├── api.js        # API configurations
-│   │   ├── csv.js        # CSV export functionality
-│   │   └── pdf.js        # PDF export functionality
-│   ├── assets/           # Images and static files
-│   ├── App.jsx           # Main app component
-│   ├── main.jsx          # Entry point
-│   └── index.css         # Global styles
-├── public/               # Static public files
-├── package.json
-├── vite.config.js
-└── README.md
+🔹 Basic API Integration Your project includes simple JSON-based API simulation such as: /api/menu.json – list of all menu items /api/orders.json – order records /api/reservations.json – reservation data /api/delivery.json – tracking updates
 
+Technologies Used
 
- Installation & Setup
+HTML5 CSS3 JavaScript JSON (Mock API) Bootstrap (optional) LocalStorage / SessionStorage for cart & session handling
 
- Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn
-- Running backend server
+🚀 How to Run the Project Download or clone the project folder Make sure the folder structure remains the same Open frontend/index.html in any browser For admin features, open admin/admin.html JSON files under /api will auto-load as API data
 
- Installation Steps
-bash
-cd admin
-npm install
-npm run dev
-
-
-The admin dashboard will be available at `http://localhost:5174`
-
- Environment Setup
-
-Make sure your backend is running and configured properly. The admin dashboard communicates with the backend API for all operations.
-
- Admin Functionalities
-
- Dashboard
-- View overall statistics
-- Monitor recent orders
-- Track system performance
-
- Food Management
-- Add new food items with images
-- Edit existing items
-- Delete items
-- Organize by categories
-- CSV/PDF export functionality
-
- Order Management
-- View all orders
-- Update order status
-- Track order details
-- Customer information
-
- Reservation Management
-- View table reservations
-- Manage booking status
-- Update reservation details
-
- User Management
-- View all users
-- Add new users
-- Manage user roles
-- Edit user information
-
- Supplier Management
-- Manage suppliers
-- Track supplier details
-- Update supplier information
-
- Settings
-- Configure admin preferences
-- Manage system settings
-
- Authentication
-
-Admin users must login with valid credentials. The authentication is handled through the backend API with JWT tokens.
-
- Purpose
-
-This project was built to practice frontend development and showcase administrative dashboard skills for managing food delivery operations.
-
- Contributing
-
-Feel free to fork and contribute to this project!
-
- License
-
-This project is open source and available under the MIT License.
-
- Author
-
-Kamsini Sivakuru
-
- Contact
-
-GitHub: https://github.com/sivakurukamsini/Food_Delivery_TasteofThaayagam
-
-
-
+🔮 Future Enhancements Integrate with real backend (Node.js / Firebase / PHP) Add authentication for both users & admin Add payment gateway (Card/QR) Add live delivery map with markers Push notifications for order updates
